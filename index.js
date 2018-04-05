@@ -16,7 +16,12 @@ mix.extend('mergeManifest', (config) => {
             compiler.plugin('emit', (curCompiler, callback) => {
                 let stats = curCompiler.getStats().toJson();
 
-                Mix.manifest.manifest = merge(Mix.manifest.read(), Mix.manifest.manifest);
+                try {
+                    Mix.manifest.manifest = merge(Mix.manifest.read(), Mix.manifest.manifest);
+                } catch (e) {
+
+                }
+
                 Mix.manifest.transform(stats).refresh();
                 callback();
             });

@@ -1,7 +1,7 @@
 
 {
   "name": "laravel-mix-merge-manifest",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A quick Laravel Mix extension to support multi mix configration without overwriting the mix-manifest.json file.",
   "main": "index.js",
   "scripts": {
