@@ -19,8 +19,6 @@
   },
   "homepage": "https://github.com/kabbouchi/laravel-mix-merge-manifest#readme",
   "dependencies": {
-    "laravel-mix": "^2.1",
     "lodash": "^4.17.4"
   }
-
 }
