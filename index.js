@@ -13,7 +13,7 @@ mix.extend('mergeManifest', (config) => {
     config.plugins.push(new class {
         apply(compiler) {
 
-            compiler.plugin('emit', (curCompiler, callback) => {
+            compiler.hooks.emit.tapAsync('ManifestPlugin', (curCompiler, callback) => {
                 let stats = curCompiler.getStats().toJson();
 
                 try {
