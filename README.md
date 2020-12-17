@@ -7,7 +7,11 @@ This extension support multi mix configration without overwriting the mix-manife
 First, install the extension.
 
 ```
+// Laravel Mix v5
 npm install laravel-mix-merge-manifest --save-dev
+
+// Laravel Mix v6
+npm install laravel-mix-merge-manifest@next --save-dev
 ```
 
 Then, require it within your `webpack.mix.js` file, like so:
