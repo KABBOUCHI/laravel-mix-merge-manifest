@@ -8,10 +8,10 @@ First, install the extension.
 
 ```
 // Laravel Mix v5
-npm install laravel-mix-merge-manifest --save-dev
+npm install laravel-mix-merge-manifest@v1 --save-dev
 
 // Laravel Mix v6
-npm install laravel-mix-merge-manifest@next --save-dev
+npm install laravel-mix-merge-manifest@v2 --save-dev
 ```
 
 Then, require it within your `webpack.mix.js` file, like so:
