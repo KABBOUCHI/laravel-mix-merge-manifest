@@ -1,6 +1,6 @@
 # Laravel Mix - Merge Manifest
 
-This extension support multi mix configration without overwriting the mix-manifest.json file.
+This extension supports multi mix configration without overwriting the mix-manifest.json file. It merges new manifests into the existing one.
 
 ## Usage
 
@@ -26,3 +26,55 @@ mix
     .less('resources/assets/less/app.less', 'public/css')
     .mergeManifest();
 ```
+
+## Examples
+
+### Running Laravel Mix with different configurations
+
+Laravel Mix only supports a global configuration. If you want to use diffent configurations - e.g. to provide a separate JS file for legacy browsers - you need to run mix multiple times with different configs.
+
+```sh
+mix && mix --mix-config=webpack.legacy.mix.js
+```
+
+Your default configuration in `webpack.mix.js` could look like this:
+```js
+// ...
+mix.js('resources/assets/scripts/main.js', 'scripts')
+// ...
+```
+
+And your legacy configuration in `webpack.legacy.mix.js` would use `.mergeManifest()`:
+```js
+// ...
+mix
+    .babel({ ... }) // Different Babel Configuration
+    .js('resources/assets/scripts/main.js', 'scripts/main.legacy.js')
+    .mergeManifest()
+// ...
+```
+
+
+### Extracting multiple vendors
+
+```sh
+mix --mix-config=webpack.backoffice.mix.js && mix --mix-config=webpack.customers.mix.js
+```
+
+`webpack.backoffice.mix.js`
+```js
+mix
+    .js('resources/js/backoffice/backoffice.js', 'public/js/backoffice')
+    .extract(['jquery', 'bootstrap', 'lodash', 'popper.js'])
+    .mergeManifest()
+```
+
+`webpack.customers.mix.js`
+```js
+mix
+    .js('resources/js/customers/customers.js', 'public/js/customers')
+    .extract(['vue'])
+    .mergeManifest()
+```
+
+Source: [How to Split Dependencies into Multiple Vendors using Laravel Mix](https://www.compulsivecoders.com/tech/how-to-build-multiple-vendors-using-laravel-mix/)
