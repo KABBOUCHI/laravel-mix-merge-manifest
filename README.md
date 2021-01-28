@@ -59,7 +59,7 @@ mix
 ### Extracting multiple vendors
 
 ```sh
-mix --mix-config=webpack.backoffice.mix.js && mix --mix-config=webpack.customers.mix.js
+npx mix --mix-config=webpack.backoffice.mix.js && npx mix --mix-config=webpack.customers.mix.js
 ```
 
 `webpack.backoffice.mix.js`
