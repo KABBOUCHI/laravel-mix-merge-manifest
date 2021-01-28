@@ -27,20 +27,21 @@ mix
     .mergeManifest();
 ```
 
-## Examples
+## Examples - Laravel Mix v6
 
 ### Running Laravel Mix with different configurations
 
 Laravel Mix only supports a global configuration. If you want to use diffent configurations - e.g. to provide a separate JS file for legacy browsers - you need to run mix multiple times with different configs.
 
 ```sh
-mix && mix --mix-config=webpack.legacy.mix.js
+npx mix && npx mix --mix-config=webpack.legacy.mix.js
 ```
 
 Your default configuration in `webpack.mix.js` could look like this:
 ```js
 // ...
 mix.js('resources/assets/scripts/main.js', 'scripts')
+    .mergeManifest()
 // ...
 ```
 
