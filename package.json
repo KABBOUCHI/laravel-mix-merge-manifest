@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "A quick Laravel Mix extension to support multi mix configration without overwriting the mix-manifest.json file.",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
