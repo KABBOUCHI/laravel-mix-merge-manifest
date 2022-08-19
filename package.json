@@ -1,6 +1,6 @@
 {
-  "name": "laravel-mix-merge-manifest",
-  "version": "0.1.3",
+  "name": "laravel-mix-merge-manifest-mycareer",
+  "version": "1.0.0",
   "description": "A quick Laravel Mix extension to support multi mix configration without overwriting the mix-manifest.json file.",
   "main": "index.js",
   "types": "index.d.ts",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VictoRD11/laravel-mix-merge-manifest"
+    "url": "git+https://github.com/VictoRD11/laravel-mix-merge-manifest-mycareer"
   },
   "keywords": [
     "laravel",
@@ -21,9 +21,9 @@
   "author": "Viktor Mazur",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/VictoRD11/laravel-mix-merge-manifest/issues"
+    "url": "https://github.com/VictoRD11/laravel-mix-merge-manifest-mycareer/issues"
   },
-  "homepage": "https://github.com/VictoRD11/laravel-mix-merge-manifest#readme",
+  "homepage": "https://github.com/VictoRD11/laravel-mix-merge-manifest-mycareer#readme",
   "dependencies": {
     "lodash": "^4.17.4"
   }
